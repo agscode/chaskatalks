@@ -1,0 +1,7 @@
+%h1= record.title
+- if record.can_edit? current-user
+  %button Editar
+
+-# Mas haml 
+- if record.creator == current_user  && record.created_at > 1.days.ago
+  %p Notice for edition
